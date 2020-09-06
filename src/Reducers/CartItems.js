@@ -43,6 +43,9 @@ export const CartItems = (items = [], action) => {
       );
       return newCartItems;
 
+    case "EMPTYCART":
+      return [];
+
     default:
       return items;
   }

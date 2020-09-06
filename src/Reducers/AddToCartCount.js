@@ -1,15 +1,11 @@
-export const AddToCartCount = (count = 0, action) => {
+export const addPopUpText = (state = "", action) => {
   switch (action.type) {
-    case "INCREMENT":
-      return count + 1;
-    case "DECREMENT":
-      if (count <= 0) {
-        return count;
-      } else {
-        return count - 1;
-      }
+    case "ADDPOP":
+      return state;
+    case "REMOVEOPOUP":
+      return state;
 
     default:
-      return count;
+      return state;
   }
 };

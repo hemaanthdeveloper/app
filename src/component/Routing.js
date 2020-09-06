@@ -6,6 +6,7 @@ import Footer from "./Footer";
 import CartList from "../container/CartList";
 import Fruits from "./Fruits";
 import Dairy from "./Dairy";
+import Item from "../container/Item";
 
 import Home from "../container/Home";
 
@@ -18,6 +19,7 @@ const Routing = () => {
       <Route exact path="/fruits" component={Fruits}></Route>
       <Route exact path="/dairy" component={Dairy}></Route>
       <Route exact path="/cart" component={CartList}></Route>
+      <Route path="/search/:id" component={Item}></Route>
       <Footer />
     </BrowserRouter>
   );

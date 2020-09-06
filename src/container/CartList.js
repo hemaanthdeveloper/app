@@ -3,6 +3,7 @@ import CartItem from "./CartItems";
 import axios from "axios";
 import { connect } from "react-redux";
 import PropTypes from "prop-types";
+import { cartItems } from "../actions";
 
 function CartList({ items }) {
   // console.log("items", items);
@@ -46,6 +47,7 @@ function CartList({ items }) {
           style={{ width: "150px" }}
           onClick={() => {
             handleSubmitRequest(items);
+            cartItems("EMPTYCART", "");
           }}
         >
           Proceed to Checkout
@@ -69,4 +71,4 @@ const mapStateToProps = (state) => {
   return { items: state.items };
 };
 
-export default connect(mapStateToProps)(CartList);
+export default connect(mapStateToProps, cartItems)(CartList);
