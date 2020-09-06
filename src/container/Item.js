@@ -42,13 +42,13 @@ function Item(props) {
               alt={details.name}
               style={{
                 float: "left",
-                height: "50%",
-                width: "50%",
+                height: "100%",
+                width: "80%",
               }}
             />
           }
         </div>
-        <div className="col-sm-5 text-left">
+        <div className="col-sm-7 sidenav" style={{ border: "1px solid black" }}>
           <h1>{details[0].name}</h1>
           <hr />
           <p>₹ : {details[0].price}</p>
