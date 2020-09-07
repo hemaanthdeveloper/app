@@ -1,7 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { connect } from "react-redux";
-import Search from "../component/Search";
 
 function Header(props) {
   return (
@@ -35,9 +34,6 @@ function Header(props) {
             <li>
               <Link to="/vegetables">Vegetables</Link>
             </li>
-          </ul>
-          <ul>
-            <Search />
           </ul>
         </div>
       </div>

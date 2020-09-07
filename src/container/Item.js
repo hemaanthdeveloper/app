@@ -33,47 +33,50 @@ function Item(props) {
   //console.log("details", details[0].id);
 
   return (
-    <div className="container-fluid text-center">
-      <div className="row content">
-        <div className="col-sm-5 sidenav">
-          {
-            <img
-              src={`/Assets/${details[0].img}`}
-              alt={details.name}
-              style={{
-                float: "left",
-                height: "100%",
-                width: "80%",
+    <div className="container">
+      <div className="col-sm-12" style={{ margin: "5px" }}>
+        <div className="card" style={{ width: "50rem", padding: "5px" }}>
+          <img
+            className="img-thumbnail"
+            src={`/Assets/${img}`}
+            alt={name}
+            style={{ width: "25rem", height: "25rem" }}
+          />
+
+          <div className="card-body">
+            <hr />
+            <p className="card-text">Price : ₹ {price}</p>
+
+            <hr />
+            <p> {details[0].description}</p>
+            <hr />
+
+            <button
+              className="btn btn-primary"
+              style={{ width: "50%" }}
+              onClick={() => {
+                props.dispatch(
+                  cartItems("ADD_TO_CART", {
+                    id,
+                    name,
+                    description,
+                    price,
+                    img,
+                    units,
+                    finalPrice,
+                  })
+                );
+                notify.show(
+                  `${name} added to Cart!`,
+                  "success",
+                  1000,
+                  "#FFFFFF"
+                );
               }}
-            />
-          }
-        </div>
-        <div className="col-sm-7 sidenav" style={{ border: "1px solid black" }}>
-          <h1>{details[0].name}</h1>
-          <hr />
-          <p>₹ : {details[0].price}</p>
-          <hr />
-          <p> {details[0].description}</p>
-          <hr />
-          <button
-            className="btn btn-primary"
-            onClick={() => {
-              props.dispatch(
-                cartItems("ADD_TO_CART", {
-                  id,
-                  name,
-                  description,
-                  price,
-                  img,
-                  units,
-                  finalPrice,
-                })
-              );
-              notify.show(`${name} added to Cart!`, "success", 1000, "#FFFFFF");
-            }}
-          >
-            Add to Cart
-          </button>
+            >
+              Add to Cart
+            </button>
+          </div>
         </div>
       </div>
     </div>

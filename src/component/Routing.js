@@ -7,6 +7,7 @@ import CartList from "../container/CartList";
 import Fruits from "./Fruits";
 import Dairy from "./Dairy";
 import Item from "../container/Item";
+import Search from "./Search";
 
 import Home from "../container/Home";
 
@@ -14,6 +15,7 @@ const Routing = () => {
   return (
     <BrowserRouter>
       <Header />
+      <Search />
       <Route exact path="/" component={Home}></Route>
       <Route exact path="/vegetables" component={Vegetables}></Route>
       <Route exact path="/fruits" component={Fruits}></Route>
