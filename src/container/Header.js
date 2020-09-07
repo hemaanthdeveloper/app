@@ -28,12 +28,12 @@ function Header(props) {
                 Cart <span className="badge">{props.items.length}</span>
               </Link>
             </li>
-            <li>
+            {/* <li>
               <Link to="/orders">Orders</Link>
             </li>
             <li>
               <Link to="/vegetables">Vegetables</Link>
-            </li>
+            </li> */}
           </ul>
         </div>
       </div>

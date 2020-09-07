@@ -2,11 +2,11 @@ import React from "react";
 
 export default function Footer() {
   return (
-    <div className="container-fluid p-3 my-3 border">
+    <div className="footer">
       <hr />
-      <h1>
-        <center>Footer</center>
-      </h1>
+      <div class="well well-sm">
+        <h5>Contact Us: hemaanthdeveloper@gmail.com </h5>
+      </div>
     </div>
   );
 }
